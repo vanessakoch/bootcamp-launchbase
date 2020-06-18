@@ -1,0 +1,27 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(66, 66, 66);
+}
+
+header {
+  background: rgb(41, 40, 40);
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid rgb(130, 138, 255);
+}
+
+.container-menu a {
+  margin: 30px;
+  color: rgb(165, 164, 164);
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.container-menu a:hover {
+  color: rgb(130, 138, 255)
+}
