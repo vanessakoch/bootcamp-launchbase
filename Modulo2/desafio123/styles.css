@@ -1,9 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 
 :root {
-  --color-bg-secondary: rgb(126, 236, 255);
+  --color-bg-secondary: rgb(0, 217, 255);
   --color-bg-primary: rgb(196, 194, 194);
-  --color-card: rgb(0, 0, 0);
+  --color-black: rgb(0, 0, 0);
 }
 
 * {
@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: rgb(66, 66, 66);
+  background-color: rgb(10, 10, 10);
 }
 
 header {
@@ -53,10 +53,12 @@ header {
 
 .container-about h1 {
   font-weight: bold;
+  color: var(--color-bg-secondary);
+  text-decoration: underline;
 }
 
 .container-about h3 {
-  width: 400px;
+  width: 600px;
   margin: 20px auto;
   opacity: 0.8;
 }
@@ -84,8 +86,8 @@ header {
 }
 
 .card {
-  margin: 30px 0;
-  background-color: var(--color-card);
+  margin: 40px 0 20px;
+  background-color: var(--color-black);
   display: grid;
   padding: 30px;
   position: relative;
@@ -128,11 +130,73 @@ header {
 }
 
 .payment {
-  color: var(--color-card);
+  color: var(--color-black);
 }
 
 .card-footer .payment {
   background-color: var(--color-bg-primary);
   filter: brightness(20%);
   border-radius: 20px;
+}
+
+/* --- Modal -- */
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal .modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.modal .modal-maximize {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.modal .modal-minimize {
+  position: absolute;
+  right: 70px;
+  top: 10px;
+  cursor: pointer;
+}
+
+/* --- Modal Active -- */
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.maximize {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
+iframe {
+  width: 100%;
+  height: 93%;
+  position: absolute;
+  top: 7%;
 }
