@@ -89,7 +89,6 @@ header {
 .card {
   margin: 40px 0 20px;
   background-color: var(--color-black);
-  display: grid;
   padding: 30px;
   position: relative;
 }
