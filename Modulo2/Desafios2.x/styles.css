@@ -55,7 +55,7 @@ header {
 .container-about h1 {
   font-weight: bold;
   color: var(--color-bg-secondary);
-  text-decoration: underline;
+  margin: 5px 0;
 }
 
 .container-about h3 {
