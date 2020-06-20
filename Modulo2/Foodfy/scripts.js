@@ -8,7 +8,7 @@ for(let card of cards) {
     const modalDescription = card.querySelector('.card-info').querySelector('p').textContent;
 
     modalOverlay.classList.add("active")
-    modalOverlay.querySelector("img").src = `/assets/${card.id}.png`
+    modalOverlay.querySelector("img").src = `assets/${card.id}.png`
     modalOverlay.querySelector("#modal-title").textContent = modalTitle
     modalOverlay.querySelector("#modal-description").textContent = modalDescription
   })
