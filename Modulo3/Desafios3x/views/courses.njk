@@ -1,0 +1,101 @@
+{% extends "layout.njk" %}
+ 
+{% block head %}
+  <title>Conteúdo - Rocketseat</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+  <section>
+    <div class="cards">
+
+      <div class="card" id="starter">
+        <div class="card-content">
+          <div class="card-number">
+            <p id="one">01</p>
+          </div>
+          <div class="card-image">
+            <img src="https://skylab.rocketseat.com.br/static/media/Starter.64c237cc.svg" alt="Logo Starter">
+          </div>
+          <div class="card-info">
+            <h3>Starter</h3>
+            <p>Torne-se um programador desejado no mercado com esses cursos gratuítos</p>
+          </div>
+          <div class="card-footer">
+            <p>10 módulos</p>
+            <p class="payment">Gratuíto</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="launchbase">
+        <div class="card-content">
+          <div class="card-number">
+            <p id="two">02</p>
+          </div>
+          <div class="card-image">
+            <img src="https://skylab.rocketseat.com.br/static/media/LaunchBase.08285320.svg" alt="Logo Launchbase">
+          </div>
+          <div class="card-info">
+            <h3>LaunchBase</h3>
+            <p>Domine a programação do zero e tenha acesso às melhores oportunidades do mercado</p>
+          </div>
+          <div class="card-footer">
+            <p>10 módulos</p>
+            <p class="payment">Pago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="gostack">
+        <div class="card-content">
+          <div class="card-number">
+            <p id="three">03</p> 
+          </div>
+          <div class="card-image">
+            <img src="https://skylab.rocketseat.com.br/static/media/GoStack.83a178a0.svg" alt="Logo GoStack">
+          </div>
+          <div class="card-info">
+            <h3>GoStack</h3>
+            <p>Treinamento imersivo nas tecnologias mais modernas de desenvolvimento web e mobile</p>
+          </div>
+          <div class="card-footer">
+            <p>10 módulos</p>
+            <p class="payment">Pago</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <div class="modal-overlay">
+    <div class="modal">
+
+      <a class="modal-close">
+        <i class="material-icons">close</i>
+      </a>
+      
+      <a class="modal-maximize">
+        <span class="material-icons">
+          open_in_full
+        </span>
+      </a>
+
+      <a class="modal-minimize">
+        <span class="material-icons">
+          close_fullscreen
+        </span>
+      </a>
+
+      <div class="modal-content">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+
+{% endblock %}
