@@ -127,17 +127,17 @@ header {
   margin: 0px auto;
 }
 
-.card-number #one {
+.card-number #roxo {
   border: 2px solid #7159C1;
   border-radius: 50%;
 }
 
-.card-number #two {
+.card-number #laranjado {
   border: 2px solid #FD951F;
   border-radius: 50%;
 }
 
-.card-number #three {
+.card-number #verde {
   border: 2px solid #04D361;
   border-radius: 50%;
 }
