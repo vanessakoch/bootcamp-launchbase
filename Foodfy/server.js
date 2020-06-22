@@ -3,7 +3,7 @@ const nunjucks = require('nunjucks')
 
 const server = express()
 
-server.set('view engine', 'html')
+server.set('view engine', 'njk')
 
 nunjucks.configure("views", {
   express: server
