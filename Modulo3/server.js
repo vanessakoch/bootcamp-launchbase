@@ -11,10 +11,15 @@ server.set("view engine", "njk")
 
 nunjucks.configure("views", {
   express: server,
-  autoescape: false //permite usar html aqui no server
+  autoescape: false, //permite usar html aqui no server
+  noCache: true
 })
 
 server.get('/', function(req, res) {
+  return res.render('index', { data })
+})
+
+server.get('/courses', function(req, res) {
   return res.render('courses', { data })
 })
 
@@ -29,6 +34,20 @@ server.get('/about', function(req, res) {
 
   return res.render('about', { about })
 })
+
+server.get("/course", function(req, res) {
+  const id = req.query.id;
+
+  const course = data.find(function (course) {
+    return course.id == id
+  })
+
+  if(!course) {
+    return res.status(404).render("not-found");
+  }
+
+  return res.render('course', { course });
+});
 
 server.use(function(req, res) {
   res.status(404).render("not-found");

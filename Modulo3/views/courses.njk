@@ -10,8 +10,8 @@
   <section>
     <div class="cards">
 
-      {% for item in data %}
-      <div class="card" id="{{item.id}}">
+    {% for item in data %}
+      <div class="card pointer" id="{{item.id}}">
         <div class="card-content">
           <div class="card-number">
             <p id="{{item.color}}">{{item.number}}</p>
@@ -29,38 +29,11 @@
           </div>
         </div>
       </div>
-      {% endfor %}
-
+    {% endfor %}
 
     </div>
   </section>
-  
-  <div class="modal-overlay">
-    <div class="modal">
 
-      <a class="modal-close">
-        <i class="material-icons">close</i>
-      </a>
-      
-      <a class="modal-maximize">
-        <span class="material-icons">
-          open_in_full
-        </span>
-      </a>
-
-      <a class="modal-minimize">
-        <span class="material-icons">
-          close_fullscreen
-        </span>
-      </a>
-
-      <div class="modal-content">
-        <iframe src="" frameborder="0"></iframe>
-      </div>
-
-    </div>
-  </div>
-
-  <script src="scripts.js"></script>
+  <script src="/scripts.js"></script>
 
 {% endblock %}
