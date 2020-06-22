@@ -23,7 +23,7 @@
     <div class="cards">
 
     {% for recipe in data %}
-      <div class="card">
+      <div class="card" id="{{ loop.index -1}}">
         <div class="card-photo">
           <img src="{{ recipe.image }}" alt="Image of {{ recipe.title }}">
         </div>
