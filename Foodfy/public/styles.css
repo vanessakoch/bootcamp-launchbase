@@ -13,8 +13,8 @@
 }
 
 body {
-  margin-left: 231px;
-  margin-right: 195px;
+  margin-left: 230px;
+  margin-right: 180px; /*220*/
 }
 
 .container-nav {
@@ -63,6 +63,8 @@ header .menu a:first-child {
 }
 
 .container-banner {
+  width: 940px;
+  height: 366px;
   background-color: var(--color-rose);
   border-radius: 30px;
   display: grid;
@@ -70,12 +72,12 @@ header .menu a:first-child {
 }
 
 .container-banner .container-info {
-  padding: 115px 59px;
+  padding: 115px 58px;
 }
 
 .container-banner h1 {
   font-size: 32px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .container-banner p {
@@ -83,12 +85,13 @@ header .menu a:first-child {
   font-size: 18px;
   color: #000000;
   line-height: 28px;
-  width: 95%;
+  width: 90%;
 }
 
 .container-banner .container-img {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 65px;
+  margin-left: 60px;
 }
 
 .container-content {
@@ -125,15 +128,16 @@ header .menu a:first-child {
 }
 
 .card-photo img {
-  width: 100%;
+  width: 300px;
+  height: 140px;
   border-radius: 15px;
 }
 
 .container-footer {
   background: #EEEEEE;
   padding: 20px;
-  margin-left: -225px;
-  margin-right: -195px;
+  margin-left: -230px;
+  margin-right: -180px;
   margin-top: 50px;
 }
 
