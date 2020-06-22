@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     {% block head %}
       <title>Foodfy</title>
     {% endblock %}
@@ -10,7 +10,6 @@
 
   <body>
     <header>
-      
       <div class="container">
         <div class="row">
           <div class="container-logo">
@@ -18,16 +17,14 @@
               <img src="/assets/logo.png" alt="FoodFy Logo">
             </a>
           </div>
-
           <div class="menu">
             {% block menu %}
-              <a href="/about">Sobre</a>
-              <a href="/recipes">Receitas</a>
+              <a id="menu-about" href="/about">Sobre</a>
+              <a id="menu-recipe" href="/recipes">Receitas</a>
             {% endblock %}
           </div>
         </div>
       </div>
-
     </header>
 
     {% block content%}
@@ -38,8 +35,6 @@
         <p>Todos direitos reservados, receitas Foodfy.</p>
       </div>
     </footer>
-
-    <script src="/scripts.js"></script>
 
   </body>
 </html>

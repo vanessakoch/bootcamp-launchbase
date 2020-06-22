@@ -5,12 +5,11 @@
 {% endblock %}
 
 {% block menu %}
-  <a href="/about">Sobre</a>
-  <a class="page" href="/recipes">Receitas</a>
+  <a id="menu-about" href="/about">Sobre</a>
+  <a class="page" id="menu-recipe" href="/recipes">Receitas</a>
 {% endblock %}
 
 {% block content %}
-
   <section>
     <div class="cards">
       {% for recipe in data %}
@@ -39,7 +38,6 @@
     </div>
   </section>
 
- 
   <script src="/scripts.js"></script>
 
 {% endblock %}}
