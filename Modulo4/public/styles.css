@@ -38,6 +38,7 @@ body {
 
 .container-menu a.active {
   font-weight: bold;
+  color: var(--secondary-color);
 }
 
 .container-menu a:hover {
@@ -62,4 +63,64 @@ body {
 
 .container-menu a + a {
   margin-left: 30px;
+}
+
+.card {
+  background-color: var(--primary-color);
+  width: 800px;
+  min-height: 500px;
+  margin: 45px auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  box-shadow: 5px 5px 5px -2px rgb(20, 22, 27);
+
+  animation-name: up;
+  animation-duration: 900ms;
+  animation-timing-function: ease-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.information {
+  padding: 40px;
+}
+
+.information .item {
+  padding: 14px 0;
+  border-top: 1px solid rgba(29, 33, 40, 0.2);
+}
+
+.information .item:first-child {
+  border: none;
+}
+
+.information .item div:nth-child(1){
+  color: var(--backgroud-color);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.information .item div:nth-child(2){
+  color: var(--detail-color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.information .item span {
+  background-color: var(--secondary-color);
+  padding: 6px 12px;
+  border-radius: 24px;
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--backgroud-color);
 }

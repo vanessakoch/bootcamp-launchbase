@@ -11,7 +11,7 @@ server.set("view engine", "njk")
 
 nunjucks.configure("views", {
   express: server,
-  autoescape: false, //permite usar html aqui no server
+  autoescape: false, 
   noCache: true
 })
 
