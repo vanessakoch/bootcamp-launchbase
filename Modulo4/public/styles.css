@@ -148,11 +148,22 @@ input::placeholder {
   font-weight: normal;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
   width: 100%;
-  background-color: var(--contrast-color);
+  font-size: 16px;
+  background-color: var(--backgroud-color);
   color: var(--primary-color);
   padding: 8px 16px;
   border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 
+a.button {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
 }

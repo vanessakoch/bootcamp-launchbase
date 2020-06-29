@@ -1,9 +1,34 @@
 const fs = require('fs')
 const data = require('./data.json')
+const Intl = require('intl')
+const { age, date, graduation } = require('./utils')
 
-// create
+// get
 
-exports.post = function(req,res) {
+exports.show = function(req, res) {
+
+  const { id } = req.params
+
+  const foundTeacher = data.teachers.find(function(teachers) {
+    return teachers.id == id
+  })
+
+  if(!foundTeacher) return res.send('Teacher not found!') 
+
+  const teacher = {
+    ...foundTeacher,
+    age: age(foundTeacher.birth),
+    education: graduation(foundTeacher.education),
+    subjects: foundTeacher.subjects.split(","),
+    created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
+  }
+  
+  return res.render("teachers/show" , { teacher })
+}
+
+// post
+
+exports.post = function(req, res) {
   // Pega as chaves do body (photo_url, name, ...)
   const keys = Object.keys(req.body)
 
@@ -36,4 +61,24 @@ exports.post = function(req,res) {
     return res.redirect('/teachers')
   })
 
+}
+
+// edit
+
+exports.edit = function(req, res) {
+  const { id } = req.params
+
+  const foundTeacher = data.teachers.find(function(teachers) {
+    return teachers.id == id
+  })
+
+  if(!foundTeacher) return res.send('Teacher not found!') 
+  
+  const teacher = {
+    ...foundTeacher,
+    birth: date(foundTeacher.birth)
+  }
+  
+  console.log(date)
+  return res.render('teachers/edit', { teacher })
 }
