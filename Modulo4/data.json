@@ -1,0 +1,24 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "photo_url": "https://google.com",
+      "name": "Van",
+      "birth": 719107200000,
+      "education": "medium",
+      "format": "tradicional",
+      "subjects": "a,b,c",
+      "created_at": 1593452253182
+    },
+    {
+      "id": 2,
+      "photo_url": "https://google.com",
+      "name": "Ele",
+      "birth": 24451200000,
+      "education": "doctorate",
+      "format": "online",
+      "subjects": "a,b,n",
+      "created_at": 1593452304500
+    }
+  ]
+}
