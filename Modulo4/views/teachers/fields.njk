@@ -39,10 +39,34 @@
   <div>Education level</div>
   <div>
     <select name="education">
-      <option value="medium">Complete High School</option>
-      <option value="graduation">Complete Graduation</option>
-      <option value="master">Master's Degree</option>
-      <option value="doctorate">Doctorate Degree</option>
+      <option 
+        value="medium" 
+        {% if teacher.education == "medium" %}
+          selected
+        {% endif %}
+        >Complete High School
+      </option>
+      <option 
+        value="graduation" 
+        {% if teacher.education == "graduation" %}
+          selected
+        {% endif %}
+        >Complete Graduation
+      </option>
+      <option 
+        value="master" 
+        {% if teacher.education == "master" %}
+          selected
+        {% endif %}
+        >Master's Degree
+      </option>
+      <option 
+        value="doctorate" 
+        {% if teacher.education == "doctorate" %}
+          selected
+        {% endif %}
+        >Doctorate Degree
+      </option>
     </select>
   </div>
 </div>
@@ -85,4 +109,4 @@
   </div>
 </div>
 
-<button type="submit">SAVE</button>
+<button type="submit">Save</button>

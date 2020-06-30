@@ -69,7 +69,7 @@ body {
   background-color: var(--primary-color);
   width: 800px;
   min-height: 500px;
-  margin: 30px auto;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: 40% 60%;
   box-shadow: 5px 5px 5px -2px rgb(20, 22, 27);
@@ -90,7 +90,7 @@ body {
 }
 
 .information {
-  padding: 30px;
+  padding: 20px 30px;
 }
 
 .information .item {
@@ -154,11 +154,11 @@ a.button {
   font-size: 16px;
   background-color: var(--backgroud-color);
   color: var(--primary-color);
-  padding: 8px 16px;
+  padding: 4px 8px;
   border-radius: 8px;
   outline: none;
-  text-transform: uppercase;
   cursor: pointer;
+  margin-top: 4px;
 }
 
 a.button {
@@ -166,4 +166,8 @@ a.button {
   display: block;
   box-sizing: border-box;
   text-align: center;
+}
+
+#form-delete button[type="submit"] {
+  background-color: var(--purple-color);
 }
