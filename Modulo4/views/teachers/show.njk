@@ -43,6 +43,11 @@
 
       <a href="/teachers/{{ teacher.id }}/edit" class="button">Edit</a>
 
+      <form id="form-delete" action="/teachers?_method=DELETE" method="post">
+        <input type="hidden" name="id" value="{{ teacher.id }}">
+        <button type="submit">Delete</button>
+      </form>
+
     </section>
 
   </div>

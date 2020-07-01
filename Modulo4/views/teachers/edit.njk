@@ -2,25 +2,16 @@
 
 {% block content %}
 
-  <div class="card">
-    <section 
-      class="photo" 
-      style="background: url(https://source.unsplash.com/collection/10553730/800x800) no-repeat center center / cover">
-    </section>
-      
-    <section class="information">
+      <form class="card" method="POST" action="/teachers?_method=PUT">
+        <section 
+          class="photo" 
+          style="background: url(https://source.unsplash.com/collection/10553730/800x800) no-repeat center center / cover">
+        </section>
 
-      <form method="POST" action="/teachers?_method=PUT">
-        {% include 'teachers/fields.njk' %}
-        <input type="hidden" name="id" value="{{ teacher.id }}">
+        <section class="information">
+          {% include 'teachers/fields.njk' %}
+          <input type="hidden" name="id" value="{{ teacher.id }}">
+        </section>
       </form>
-
-      <form id="form-delete" action="/teachers?_method=DELETE" method="post">
-        <input type="hidden" name="id" value="{{ teacher.id }}">
-        <button type="submit">Delete</button>
-      </form>
-
-    </section>
-  </div>
 
 {% endblock content %}
