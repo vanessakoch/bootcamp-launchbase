@@ -2,46 +2,34 @@
 
 {% block content %}
 
-  <div class="card">
-    <section class="photo" style="background: url(https://source.unsplash.com/collection/10553730/800x800) no-repeat center center / cover"></section>
+  <div class="card table-container">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Full name</th>
+          <th>Subjects</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for teacher in teachers %}
+          <tr>
+            <td>
+              <span style="background-image: url({{ teacher.photo_url }})"></span>
+              {{ teacher.name }}
+            </td>
+            <td class="table-subject">
+              {% for subject in teacher.subjects.split(",") %}
+                <span>{{ subject }}</span>
+              {% endfor %}
+            </td>
+            <td><a href="/teachers/{{ teacher.id }}">view</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
     
-    <section class="information">
-
-      <div class="item">
-        <div>Full name</div>
-        <div>Mauro Fernando Voigt</div>
-      </div>
-
-      <div class="item">
-        <div>Age</div>
-        <div>55</div>
-      </div>
-
-      <div class="item">
-        <div>Education Level</div>
-        <div>Doctorate degree</div>
-      </div>
-
-      <div class="item">
-        <div>Class format</div>
-        <div>Presential</div>
-      </div>
-
-      <div class="item">
-        <div>Subjects</div>
-        <div>
-          <span>Mathematics</span>
-          <span>Physics</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>Since</div>
-        <div>20/02/2018</div>
-      </div>
-
-    </section>
-
   </div>
 
 {% endblock content %}

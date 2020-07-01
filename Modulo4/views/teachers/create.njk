@@ -1,5 +1,9 @@
 {% extends "layout.njk" %}
 
+{% block head %}
+  <title>Create Teacher</title>
+{% endblock %}
+
 {% block content %}
 
   <form class="card" method="POST" action="/teachers">
@@ -9,6 +13,7 @@
     </section>
     
     <section class="information">
+      <h3>New Teacher</h3>
       {% include 'teachers/fields.njk' %}  
     </section>
   </form>

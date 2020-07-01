@@ -3,6 +3,10 @@ const data = require('./data.json')
 const Intl = require('intl')
 const { age, date, graduation } = require('./utils')
 
+exports.index = function(req, res) {
+  return res.render('teachers/index', { teachers : data.teachers })
+}
+
 // get
 
 exports.show = function(req, res) {
@@ -58,7 +62,7 @@ exports.post = function(req, res) {
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
     if(err) return res.send('Write file error!')
 
-    return res.redirect("/teachers")
+    return res.redirect('/teachers')
   })
 
 }
@@ -128,6 +132,6 @@ exports.delete = function(req, res) {
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) {
     if (err) return res.send('Write file error!')
 
-    return res.redirect("/teachers")
+    return res.redirect('/teachers')
   })
 }
