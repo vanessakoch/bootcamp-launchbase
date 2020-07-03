@@ -1,10 +1,14 @@
 const fs = require('fs')
-const data = require('./data.json')
+const data = require('../data.json')
 const Intl = require('intl')
-const { age, date, graduation } = require('./utils')
+const { age, date, graduation } = require('../utils')
 
 exports.index = function(req, res) {
   return res.render('teachers/index', { teachers : data.teachers })
+}
+
+exports.create = function(req, res) {
+  return res.render('teachers/create')
 }
 
 // get
@@ -46,7 +50,13 @@ exports.post = function(req, res) {
 
   birth = Date.parse(birth)
   created_at = Date.now()
-  id = data.teachers.length + 1
+
+  let id = 1
+  const lastTeacher = data.teachers[data.teachers.length -1 ]
+
+  if(lastTeacher) {
+    id = lastTeacher.id + 1
+  }
 
   data.teachers.push({
     id,
@@ -80,7 +90,7 @@ exports.edit = function(req, res) {
   
   const teacher = {
     ...foundTeacher,
-    birth: date(foundTeacher.birth)
+    birth: date(foundTeacher.birth).iso
   }
   
   return res.render("teachers/edit", { teacher })
