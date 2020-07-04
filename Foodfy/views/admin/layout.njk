@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+    {% block head %}
+      <title>Admin - Foodfy</title>
+    {% endblock %}
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container-admin">
+        <div>
+          <a href="/">
+            <img src="/assets/white_logo.png" alt="FoodFy Logo">
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-body">
+      {% block content%}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

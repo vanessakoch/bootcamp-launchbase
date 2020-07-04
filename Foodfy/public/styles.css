@@ -11,12 +11,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
-body {
-  margin: 0 15%;
-}
-
+.container-admin,
 .container-nav {
   width: 100%;
+}
+
+.container-body {
+  margin: 0 15%;
 }
 
 .row {
@@ -24,12 +25,22 @@ body {
   flex-wrap: wrap;
 }
 
+.container-admin img,
 .container-logo img {
-  max-width: 100%;
-  margin-right: 121px; 
+  margin-top: -5px;
+  margin-left: 210px;
 }
 
-header {
+.container-admin {
+  background-color: #111;
+  height: 80px;
+}
+
+.container-admin img {
+  margin-top: 25px;
+}
+
+#header-pattern {
   width: 100%;
   margin: 2rem 0;
 }
@@ -44,6 +55,10 @@ header .menu a {
   text-decoration: none;
   font-size: 16px;
   margin-left: 35px;
+}
+
+header .menu a:first-child {
+  margin-left: 115px;
 }
 
 header .menu a.page {
@@ -129,10 +144,8 @@ header .menu a:hover {
 .container-footer {
   background: #EEEEEE;
   padding: 20px;
-  position: absolute;
-  left: 0;
-  right: 0;
   margin-top: 50px;
+
 }
 
 .container-footer p {
@@ -226,4 +239,73 @@ header .menu a:hover {
 
 .container-404 h3 {
   margin-bottom: 40px;
+}
+
+.cards-admin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card-admin {
+  display: flex;  
+}
+
+.card-admin img {
+  width: 172px;
+  height: 80px;
+  border-radius: 8.57px;
+}
+
+.card-admin--content {
+  margin-left: 20px;
+}
+
+.card-admin--content h3 {
+  font-size: 18px;
+  color: #111111;
+  font-weight: normal;
+}
+
+.card-admin--content p {
+  font-size: 14px;
+  color: #777777;
+}
+
+.card-admin--content a {
+  font-size: 14px;
+  color: #6558C3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.container-action {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.container-action h3 {
+  font-size: 24px;
+  color: #111111;
+}
+
+.container-action a {
+  background: #6558C3;
+  border-radius: 4px; 
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  width: 136px;
+  text-align: center;
+  padding: 6px 2px;
+  position: absolute;
+  right: 15.5%;
+}
+
+#ingredient-list, #preparation-list {
+  list-style-type: none;
+  margin-left: 0;
 }
