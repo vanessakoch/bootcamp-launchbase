@@ -1,12 +1,7 @@
-{% extends "layout.njk" %}
+{% extends "recipes/layout.njk" %}
 
 {% block head %}
   <title>Receitas - Foodfy</title>
-{% endblock %}
-
-{% block menu %}
-  <a id="menu-about" href="/about">Sobre</a>
-  <a class="page" id="menu-recipe" href="/recipes">Receitas</a>
 {% endblock %}
 
 {% block content %}
@@ -38,6 +33,6 @@
     </div>
   </section>
 
-  <script src="/scripts.js"></script>
+  <script src="scripts/scripts.js"></script>
 
 {% endblock %}}

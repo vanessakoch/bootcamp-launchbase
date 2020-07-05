@@ -28,7 +28,7 @@
 .container-admin img,
 .container-logo img {
   margin-top: -5px;
-  margin-left: 210px;
+  margin-left: 13rem;
 }
 
 .container-admin {
@@ -188,8 +188,8 @@ header .menu a:hover {
 
 .container-init img {
   border-radius: 15px;
-  max-width:100%;
-	height:auto;
+  min-width: 940px;
+	max-height: 280px;
 }
 
 .recipe-subtitle {
@@ -291,21 +291,77 @@ header .menu a:hover {
   color: #111111;
 }
 
-.container-action a {
+.container-action a, #btn-delete, button[type=submit] {
   background: #6558C3;
-  border-radius: 4px; 
+  border-radius: 4px;
   font-size: 16px;
   color: #FFFFFF;
   font-weight: bold;
   text-decoration: none;
   width: 136px;
   text-align: center;
-  padding: 6px 2px;
+  padding: 8px 2px;
   position: absolute;
   right: 15.5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container-action #btn-delete {
+  background: #DC4747;
+  border-radius: 4px;
+  width: 100px;
+  right: 350px;
 }
 
 #ingredient-list, #preparation-list {
   list-style-type: none;
   margin-left: 0;
+}
+
+.container-items {
+  margin-bottom: 30px;
+}
+
+.container-items .item:first-child {
+  margin-top: 30px;
+}
+
+.container-items .item h3 {
+  font-size: 16px;
+  color: #111111;
+  margin-top: 30px;
+}
+
+.container-items .item input, textarea {
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  width: 95%;
+  height: 49px;
+  outline: none;
+  margin-top: 10px;
+  font-size: 16px;
+  display: relative;
+  padding: 0 20px;
+  color: #111111;
+}
+
+.container-items .item textarea {
+  height: 257px;
+  line-height: 24px;
+  padding: 20px;
+}
+
+.container-items .item button {
+  font-size: 16px;
+  color: #6558C3;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }

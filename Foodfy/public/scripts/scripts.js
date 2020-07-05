@@ -1,4 +1,6 @@
 const cards = document.querySelectorAll('.card');
+const currentPage = location.pathname
+const itemsMenu = document.querySelectorAll('header .menu a')
 const ingredients = document.querySelector('#ingredient-content');
 const preparation = document.querySelector('#preparation-content');
 const information = document.querySelector('#information-content');
@@ -12,6 +14,12 @@ for(let card of cards) {
   })
 }
 
+for(item of itemsMenu) {
+  if(currentPage.includes(item.getAttribute('href'))){
+    item.classList.add('page')
+  }
+}
+
 const hideAndShow = function(botao, container) {
   if(botao.textContent === 'ESCONDER') {
     botao.textContent = 'MOSTRAR'
@@ -22,15 +30,17 @@ const hideAndShow = function(botao, container) {
   }
 }
 
-btnIngredients.addEventListener("click", function () {
-  hideAndShow(btnIngredients, ingredients)
-})
+if (btnInformation) {
 
-btnPreparation.addEventListener("click", function () {
-  hideAndShow(btnPreparation, preparation)
-})
+  btnIngredients.addEventListener("click", function () {
+    hideAndShow(btnIngredients, ingredients)
+  })
 
-btnInformation.addEventListener("click", function () {
-  hideAndShow(btnInformation, information)
-})
+  btnPreparation.addEventListener("click", function () {
+    hideAndShow(btnPreparation, preparation)
+  })
 
+  btnInformation.addEventListener("click", function () {
+    hideAndShow(btnInformation, information)
+  })
+}

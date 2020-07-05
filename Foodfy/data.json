@@ -71,6 +71,7 @@
       "information": ""
     },
     {
+      "id": 4,
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/lasanha.png",
       "title": "Lasanha mac n' cheese",
       "author": "Juliano Vieira",
@@ -91,6 +92,7 @@
       "information": "Recheie a lasanha com o que preferir."
     },
     {
+      "id": 5,
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png",
       "title": "Espaguete ao alho",
       "author": "Júlia Kinoto",
@@ -115,6 +117,7 @@
       "information": "Não lave o macarrão nem passe óleo ou gordura nele depois de escorrê-lo. Coloque direto na frigideira."
     },
     {
+      "id": 6,
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/doce.png",
       "title": "Docinhos pão-do-céu",
       "author": "Ricardo Golvea",

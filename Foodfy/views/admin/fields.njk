@@ -1,0 +1,79 @@
+<div class="item">
+  <h3>Imagem da receita</h3>
+  <input type="url" name="image" value="{{ recipe.image }}">
+</div>
+
+<div class="item">
+  <h3>Ingredientes</h3>
+    <div id="ingredients">
+      {% for ingredient in recipe.ingredients %}
+        <div class="ingredient">  
+          <input type="text" name="ingredients[]" value="{{ ingredient }}">
+        </div> 
+      {% endfor %}
+      {% if recipe.id == null %}
+        <div class="ingredient">  
+          <input type="text" name="ingredients[]" value="">
+        </div>
+      {% endif %} 
+    </div>
+  <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+</div>
+
+<div class="item">
+  <h3>Modo de preparo</h3>
+    <div id="preparations">
+      {% for preparation in recipe.preparation %}
+        <div class="preparation">
+          <input type="text" name="preparation[]" value="{{ preparation }}">
+        </div>
+      {% endfor %}
+      {% if recipe.id == null %}
+        <div class="preparation">
+          <input type="text" name="preparation[]">
+        </div>
+      {% endif %}
+    </div>
+  <button type="button" class="add-preparation">Adicionar novo passo</button>
+</div>
+
+<div class="item">
+  <h3>Informações adicionais</h3>
+  <textarea name="information" cols="30" rows="10">
+    {{ recipe.information }}
+  </textarea>
+</div>
+
+<script>
+  function addIngredient() {
+    const ingredients = document.querySelector("#ingredients");
+    const fieldContainer = document.querySelectorAll(".ingredient");
+
+    const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+
+    if (newField.children[0].value == "") return false;
+
+    newField.children[0].value = "";
+    ingredients.appendChild(newField);
+  }
+
+  function addPreparation() {
+    const preparations = document.querySelector("#preparations");
+    const fieldContainer = document.querySelectorAll(".preparation");
+
+    const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+
+    if (newField.children[0].value == "") return false;
+
+    newField.children[0].value = "";
+    preparations.appendChild(newField);
+  }
+
+  document
+    .querySelector(".add-ingredient")
+    .addEventListener("click", addIngredient);
+
+  document
+    .querySelector(".add-preparation")
+    .addEventListener("click", addPreparation);
+</script>

@@ -16,14 +16,14 @@
     <div class="cards-admin">
 
     {% for recipe in data %}
-      <div class="card-admin" id="{{ loop.index -1}}">
+      <div class="card-admin" id="{{ recipe.id }}">
         <div>
           <img src="{{ recipe.image }}" alt="Image of {{ recipe.title }}">
         </div>
         <div class="card-admin--content">
           <h3>{{ recipe.title }}</h3>
           <p>por {{ recipe.author }}</p>
-          <a href="#">Visualizar</a>
+          <a href="/admin/recipes/{{ recipe.id }}">Visualizar</a>
         </div>
       </div>
     {% endfor %}

@@ -5,15 +5,15 @@ const recipes = require('./controllers/recipes')
 const routes = express.Router()
 
 routes.get('/', function(req, res) {
-  res.render('index', { data: data.recipes })
+  res.render('recipes/index', { data: data.recipes })
 })
 
 routes.get('/about', function(req, res) {
-  res.render('about')
+  res.render('recipes/about')
 })
 
 routes.get('/recipes', function(req, res) {
-  res.render('recipes', { data: data.recipes })
+  res.render('recipes/recipes', { data: data.recipes })
 })
 
 routes.get("/recipes/:index", function (req, res) {
@@ -24,7 +24,7 @@ routes.get("/recipes/:index", function (req, res) {
       return res.status(404).render("not-found")
   }
 
-  return res.render("recipe", { recipe })
+  return res.render("recipes/recipe", { recipe })
 })
 
 routes.get("/admin/recipes", recipes.index)
