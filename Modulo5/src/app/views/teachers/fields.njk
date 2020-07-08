@@ -1,0 +1,115 @@
+<div class="item-container">
+
+  <div class="item">
+    <div>Photo</div>
+    <div>
+      <input 
+        type="url" 
+        name="photo_url"
+        placeholder="https://"
+        value="{{ teacher.photo_url }}"
+        required
+      >
+    </div>
+  </div>
+
+  <div class="item">
+    <div>Full name</div>
+    <div>
+      <input 
+        type="text" 
+        name="name"
+        placeholder="Type your full name"
+        value="{{ teacher.name }}"
+
+      >
+    </div>
+  </div>
+
+  <div class="item">
+    <div>Birth date</div>
+    <div>
+      <input 
+        type="date" 
+        name="birth"
+        value="{{ teacher.birth }}"
+      >
+    </div>
+  </div>
+
+  <div class="item">
+    <div>Education level</div>
+    <div>
+      <select name="education">
+        <option 
+          value="medium" 
+          {% if teacher.education == "medium" %}
+            selected
+          {% endif %}
+          >Complete High School
+        </option>
+        <option 
+          value="graduation" 
+          {% if teacher.education == "graduation" %}
+            selected
+          {% endif %}
+          >Complete Graduation
+        </option>
+        <option 
+          value="master" 
+          {% if teacher.education == "master" %}
+            selected
+          {% endif %}
+          >Master's Degree
+        </option>
+        <option 
+          value="doctorate" 
+          {% if teacher.education == "doctorate" %}
+            selected
+          {% endif %}
+          >Doctorate Degree
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="item">
+    <div>Class format</div>
+    <div>
+      <span>
+        <input 
+          type="radio" 
+          name="format" 
+          value="tradicional" 
+          {% if teacher.format == 'tradicional' %}
+            checked
+          {% endif %}
+        >Tradicional classes
+      </span>
+      <span>
+        <input 
+          type="radio" 
+          name="format" 
+          value="online"
+          {% if teacher.format == 'online' %}
+            checked
+          {% endif %}
+        >Online classes
+      </span>
+    </div>
+  </div>
+
+  <div class="item">
+    <div>Subjects</div>
+    <div>
+      <input 
+        type="text" 
+        name="subjects"
+        value="{{ teacher.subjects }}"
+        placeholder="Type the subjects you teach between commas ,"
+      >
+    </div>
+  </div>
+</div>
+
+<button type="submit">Save</button>

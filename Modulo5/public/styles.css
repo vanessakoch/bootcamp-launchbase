@@ -1,0 +1,253 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+
+:root {
+  --primary-color: #FAFAFE;
+  --secondary-color: #68FEE4;
+  --backgroud-color: #22262F;
+  --detail-color: #0E1317;
+  --contrast-color: #338BD9;
+  --purple-color: #904994;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+header {
+  background-color: var(--backgroud-color);
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2px solid var(--detail-color);
+}
+
+body {
+  background-color: var(--backgroud-color);
+}
+
+.container-menu a {
+  text-decoration: none;
+  position: relative;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.container-menu a.active {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.container-menu a:hover {
+  color: var(--secondary-color);
+  transition: color 700ms ease-in;
+}
+
+.container-menu a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+.container-menu a:hover::after {
+  width: 100%;
+  transition: width 300ms ease-in-out;
+}
+
+.container-menu a + a {
+  margin-left: 30px;
+}
+
+.card {
+  background-color: var(--primary-color);
+  width: 900px;
+  min-height: 500px;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  box-shadow: 5px 5px 5px -2px rgb(20, 22, 27);
+
+  animation-name: up;
+  animation-duration: 900ms;
+  animation-timing-function: ease-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.information {
+  padding: 40px 40px 20px 40px;
+}
+
+.information .item {
+  padding: 10px 0;
+  border-top: 1px solid rgba(29, 33, 40, 0.2);
+}
+
+.information .item-container .item:first-child {
+  border: none;
+}
+
+.information h3,
+.information .item div:nth-child(1){
+  color: var(--backgroud-color);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.information .item div:nth-child(2){
+  color: var(--detail-color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.information h3 {
+  color: var(--purple-color);
+  text-transform: uppercase;
+}
+
+.table-subject span,
+.information .item span {
+  background-color: var(--secondary-color);
+  padding: 6px 12px;
+  border-radius: 24px;
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--backgroud-color);
+  text-transform: uppercase;
+}
+
+input, select {
+  width: 100%;
+  color: var(--detail-color);
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 6px;
+}
+
+select {
+  background:transparent;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button[type="submit"],
+a.button {
+  width: 100%;
+  font-size: 16px;
+  background-color: var(--backgroud-color);
+  color: var(--primary-color);
+  padding: 8px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+a.button {
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#form-delete button[type="submit"] {
+  background-color: var(--purple-color);
+}
+
+.table-container {
+  display: block;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+}
+
+.table-container table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.table-container tbody tr td {
+  text-align: center;
+}
+
+td, th {
+  padding: 16px;
+  border-bottom: 1px solid rgba(29, 33, 40, 0.2);
+}
+
+tbody tr:last-child td {
+  border: none;
+}
+
+thead tr th {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgb(109, 108, 108);
+}
+
+.table-container > a,
+tbody tr td a {
+  background-color: var(--purple-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  color: var(--primary-color)
+}
+
+.table-container > a{
+  margin-bottom: 16px;
+  width: 50px;
+  text-align: center;
+  display: inline-block;
+}
+
+tbody tr td:first-child {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: center;
+}
+
+thead tr th:first-child {
+  padding-left: 60px;
+}
+
+tbody tr td:first-child span {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 3px 1px 6px -4px black;
+  border: 2px solid var(--primary-color);
+}
+
+.table-subject span {
+  margin: 0;
+}

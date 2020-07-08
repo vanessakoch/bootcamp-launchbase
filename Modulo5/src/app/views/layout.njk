@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <link rel="icon" href="/assets/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css">
+    {% block head %}
+      <title>Home - School</title>
+    {% endblock %}
+  </head>
+
+  <body>
+    <header>
+      <div class="container-menu">
+        <a href="/teachers"></i>Teachers</a>
+        <a href="/students">Students</a>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="/scripts.js"></script>
+  </body>
+</html>

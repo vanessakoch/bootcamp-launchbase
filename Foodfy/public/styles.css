@@ -138,7 +138,7 @@ header .menu a:hover {
 .card-photo img {
   height: 140px;
   border-radius: 15px;
-  max-width:100%;
+  width: 100%;
 }
 
 .container-footer {
@@ -188,7 +188,7 @@ header .menu a:hover {
 
 .container-init img {
   border-radius: 15px;
-  min-width: 940px;
+  width: 100%;
 	max-height: 280px;
 }
 

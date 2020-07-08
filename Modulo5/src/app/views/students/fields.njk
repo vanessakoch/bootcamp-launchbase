@@ -1,0 +1,116 @@
+<div class="item-container">
+
+  <div class="item">
+    <div>Photo</div>
+    <div>
+      <input 
+        type="url" 
+        name="photo_url"
+        placeholder="https://"
+        value="{{ student.photo_url }}"
+        required
+      >
+    </div>
+  </div>
+
+  <div class="item">
+    <div>Full Name</div>
+    <div>
+      <input 
+        type="text" 
+        name="name"
+        value="{{ student.name }}"
+      >
+    </div>
+  </div>
+
+  <div class="item">
+    <div>Birthday</div>
+    <div>
+      <input 
+        type="date" 
+        name="birth"
+        value="{{ student.birth }}"
+      >
+    </div>
+  </div>
+
+  <div class="item">
+    <div>E-mail</div>
+    <div>
+      <input 
+        type="email" 
+        name="email"
+        value="{{ student.email }}"
+      >
+    </div>
+  </div>
+
+  <div class="item">
+    <div>School Year</div>
+    <div>
+      <select name="schoolyear">
+        <option value="5" 
+          {% if student.schoolyear == "5" %}
+            selected
+          {% endif %}
+          >5th grade of Elementery School
+        </option>
+        <option value="6"
+          {% if student.schoolyear == "6" %}
+            selected
+          {% endif %} 
+          >6th grade of Middle School 
+        </option>
+        <option value="7"
+          {% if student.schoolyear == "7" %}
+            selectec
+          {% endif %}
+          >7th grade of Middle School
+        </option>
+        <option value="8"
+          {% if student.schoolyear == "8" %}
+            selected
+          {% endif %}  
+          >8th grade of Middle School
+        </option>
+        <option value="9"
+          {% if student.schoolyear == "9" %}
+            selected
+          {% endif %}
+          >9th grade (Freshman) of High School
+        </option>
+        <option value="10"
+          {% if student.schoolyear == "10" %}
+            selected
+          {% endif %} 
+          >10th grade (Sophomore) of High School 
+        </option>
+        <option value="11"
+          {% if student.schoolyear == "11" %}
+            selected
+          {% endif %}  
+          >11th grade (Junior) of High School
+        </option>
+        <option value="12"
+          {% if student.schoolyear == "12" %}
+            selected
+          {% endif %}
+          > 12th grade (Senior) of High School 
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="item">
+    <div>Class Load (Hours)</div>
+    <div>
+      <input 
+        type="number" 
+        name="classhours"
+        value="{{ student.classhours }}"
+      >
+    </div>
+  </div>
+
+<button type="submit">Save</button>

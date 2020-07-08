@@ -138,6 +138,20 @@
         "açúcar de confeiteiro e corte em quadrados."
       ],
       "information": ""
+    },
+    {
+      "id": 7,
+      "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "title": "Salada Romana",
+      "author": "Vanessa Koch",
+      "ingredients": [
+        "2",
+        "2"
+      ],
+      "preparation": [
+        "a"
+      ],
+      "information": "    5555555555    \r\n  \r\n  "
     }
   ]
 }
