@@ -5,9 +5,9 @@
     <div>
       <input 
         type="url" 
-        name="photo_url"
+        name="avatar_url"
         placeholder="https://"
-        value="{{ student.photo_url }}"
+        value="{{ student.avatar_url }}"
         required
       >
     </div>
@@ -29,8 +29,8 @@
     <div>
       <input 
         type="date" 
-        name="birth"
-        value="{{ student.birth }}"
+        name="birth_date"
+        value="{{ student.birth_date }}"
       >
     </div>
   </div>
@@ -49,51 +49,51 @@
   <div class="item">
     <div>School Year</div>
     <div>
-      <select name="schoolyear">
+      <select name="grade">
         <option value="5" 
-          {% if student.schoolyear == "5" %}
+          {% if student.grade == "5" %}
             selected
           {% endif %}
           >5th grade of Elementery School
         </option>
         <option value="6"
-          {% if student.schoolyear == "6" %}
+          {% if student.grade == "6" %}
             selected
           {% endif %} 
           >6th grade of Middle School 
         </option>
         <option value="7"
-          {% if student.schoolyear == "7" %}
+          {% if student.grade == "7" %}
             selectec
           {% endif %}
           >7th grade of Middle School
         </option>
         <option value="8"
-          {% if student.schoolyear == "8" %}
+          {% if student.grade == "8" %}
             selected
           {% endif %}  
           >8th grade of Middle School
         </option>
         <option value="9"
-          {% if student.schoolyear == "9" %}
+          {% if student.grade == "9" %}
             selected
           {% endif %}
           >9th grade (Freshman) of High School
         </option>
         <option value="10"
-          {% if student.schoolyear == "10" %}
+          {% if student.grade == "10" %}
             selected
           {% endif %} 
           >10th grade (Sophomore) of High School 
         </option>
         <option value="11"
-          {% if student.schoolyear == "11" %}
+          {% if student.grade == "11" %}
             selected
           {% endif %}  
           >11th grade (Junior) of High School
         </option>
         <option value="12"
-          {% if student.schoolyear == "12" %}
+          {% if student.grade == "12" %}
             selected
           {% endif %}
           > 12th grade (Senior) of High School 
@@ -107,8 +107,8 @@
     <div>
       <input 
         type="number" 
-        name="classhours"
-        value="{{ student.classhours }}"
+        name="class_load"
+        value="{{ student.class_load }}"
       >
     </div>
   </div>

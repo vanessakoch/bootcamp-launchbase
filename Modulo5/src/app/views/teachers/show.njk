@@ -7,7 +7,7 @@
 {% block content %}
 
   <div class="card">
-    <section class="photo" style="background: url({{ teacher.photo_url}}) no-repeat center center / cover"></section>
+    <section class="photo" style="background: url({{ teacher.avatar_url}}) no-repeat center center / cover"></section>
     
     <section class="information">
 
@@ -26,18 +26,18 @@
 
         <div class="item">
           <div>Education Level</div>
-          <div>{{ teacher.education }}</div>          
+          <div>{{ teacher.education_level }}</div>          
         </div>
 
         <div class="item">
           <div>Class format</div>
-          <div>{{ "Tradicional" if teacher.format == "tradicional" else "Online" }}</div>
+          <div>{{ "Tradicional" if teacher.class_type == "tradicional" else "Online" }}</div>
         </div>
 
         <div class="item">
           <div>Subjects</div>
           <div>
-            {% for subject in teacher.subjects %}
+            {% for subject in teacher.subjects_taught %}
               <span>{{ subject }}</span>
             {% endfor %}
           </div>

@@ -18,14 +18,14 @@
         {% for student in students %}
           <tr>
             <td>
-              <span style="background-image: url({{ student.photo_url }})"></span>
+              <span style="background-image: url({{ student.avatar_url }})"></span>
               {{ student.name }}
             </td>
             <td>
               <span>{{ student.email }}</span>
             </td>
             <td>
-              <span>{{ student.schoolyear }}th grade</span>
+              <span>{{ student.grade }}</span>
             </td>
             <td><a href="/students/{{ student.id }}">view</a></td>
           </tr>

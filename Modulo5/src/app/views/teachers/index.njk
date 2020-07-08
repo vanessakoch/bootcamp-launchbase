@@ -17,11 +17,11 @@
         {% for teacher in teachers %}
           <tr>
             <td>
-              <span style="background-image: url({{ teacher.photo_url }})"></span>
+              <span style="background-image: url({{ teacher.avatar_url }})"></span>
               {{ teacher.name }}
             </td>
             <td class="table-subject">
-              {% for subject in teacher.subjects.split(",") %}
+              {% for subject in teacher.subjects_taught.split(",") %}
                 <span>{{ subject }}</span>
               {% endfor %}
             </td>
