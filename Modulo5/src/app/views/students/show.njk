@@ -39,6 +39,10 @@
           <div>{{ student.class_load }}</div>
         </div>
 
+        <div class="item">
+          <div>Teacher</div>
+          <div>{{ student.teacher_name }}</div>
+        </div>
       </div>
 
       <a href="/students/{{ student.id }}/edit" class="button">Edit</a>
@@ -53,6 +57,5 @@
     </section>
 
   </div>
-
 
 {% endblock content %}

@@ -4,16 +4,16 @@ const Student = require('../models/Student')
 module.exports = {
 
   index(req, res) {
-
     Student.all(function(students) {
       return res.render('students/index', { students })
     })
-
   },
 
   create(req, res) {
-    return res.render('students/create')
-  },
+    Student.selectTeacher(function(options){
+      return res.render('students/create', { instructor_options: options })
+    })
+  },  
 
   post(req, res) {
     const keys = Object.keys(req.body)
@@ -46,7 +46,10 @@ module.exports = {
 
       student.birth_date = date(student.birth_date).iso
 
-      return res.render("students/edit", { student })
+      Student.selectTeacher(function(options){
+        return res.render('students/edit', { student, instructor_options: options })
+      })
+
     })
   },
 
@@ -65,7 +68,6 @@ module.exports = {
   },
 
   delete(req, res) {
-    
     Student.delete(req.body.id, function() {
       return res.redirect("/students")
     })

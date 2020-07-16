@@ -4,12 +4,17 @@ const db = require('../../config/db')
 module.exports = {
   all(callback) {
 
-    db.query(`SELECT * from teachers ORDER BY name ASC`, function(err, results) {
+    db.query(`
+    SELECT teachers.*, count(students) AS number_students
+    FROM teachers
+    LEFT JOIN students ON (students.teacher_id = teachers.id)
+    GROUP BY teachers.id 
+    ORDER BY number_students DESC`, 
+    function(err, results) {
       if(err) throw `Database error! ${err}`
 
       callback(results.rows)
     })
-
   },
 
   create(data, callback) {
@@ -27,8 +32,8 @@ module.exports = {
       RETURNING id
     `
     const values = [
-      data.name,
       data.avatar_url,
+      data.name,
       date(data.birth_date).iso,
       data.education_level,
       data.class_type,
