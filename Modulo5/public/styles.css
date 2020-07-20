@@ -211,7 +211,9 @@ thead tr th {
 }
 
 .table-container > a,
-tbody tr td a {
+tbody tr td a,
+.index-header a, 
+.index-header button {
   background-color: var(--purple-color);
   text-transform: uppercase;
   text-decoration: none;
@@ -250,4 +252,29 @@ tbody tr td:first-child span {
 
 .table-subject span {
   margin: 0;
+}
+
+.index-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.index-header a {
+  width: 120px;
+}
+
+.index-header form {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  align-items: center;
+  grid-gap: 8px;
+}
+
+.index-header form input {
+  border: 1px solid #eee;
+  padding: 4px 8px;
+  box-sizing: border-box;
 }

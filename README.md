@@ -17,5 +17,5 @@
 ---
 
 <p align="center">
-  Made 💖 by Vanessa Ribeiro Koch
+  Made with 💖 by Vanessa Ribeiro Koch
 </p>
