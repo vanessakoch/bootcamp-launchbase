@@ -17,12 +17,12 @@
 }
 
 header {
-  background-color: var(--backgroud-color);
+  background-color: var(--background-color);
   text-align: center;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
-  border-bottom: 2px solid var(--detail-color);
+  border-bottom: 2px solid white;
 }
 
 body {
@@ -259,7 +259,6 @@ tbody tr td:first-child span {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   text-align: center;
-  margin-bottom: 32px;
 }
 
 .index-header a {
@@ -277,4 +276,31 @@ tbody tr td:first-child span {
   border: 1px solid #eee;
   padding: 4px 8px;
   box-sizing: border-box;
+}
+
+.table-container {
+  display: grid;
+  grid-template: 64px 1fr 16px / 1fr;
+}
+
+.index-header {
+  align-self: start;
+}
+
+.table-container .pagination {
+  margin: 0;
+  align-self: end;
+  justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+  color: var(--purple-color);
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+.pagination a:hover {
+  filter: brightness(0.3);
+  border-bottom: 1px solid var(--purple-color);
 }

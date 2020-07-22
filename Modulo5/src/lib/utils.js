@@ -39,8 +39,8 @@ module.exports = {
       graduation = 'Complete Graduation'
     } else if (education == 'master') {
       graduation = `Master's Degree`
-      graduation = 'Doctorate Degree'
     } else {
+      graduation = 'Doctorate Degree'
     }
 
     return graduation

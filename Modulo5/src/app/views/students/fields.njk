@@ -51,49 +51,49 @@
     <div>
       <select name="grade">
         <option value="5" 
-          {% if student.grade == "5" %}
+          {% if student.grade == "5th grade of Elementery School" %}
             selected
           {% endif %}
           >5th grade of Elementery School
         </option>
         <option value="6"
-          {% if student.grade == "6" %}
+          {% if student.grade == "6th grade of Middle School" %}
             selected
           {% endif %} 
           >6th grade of Middle School 
         </option>
         <option value="7"
-          {% if student.grade == "7" %}
+          {% if student.grade == "7th grade of Middle School" %}
             selectec
           {% endif %}
           >7th grade of Middle School
         </option>
         <option value="8"
-          {% if student.grade == "8" %}
+          {% if student.grade == "8th grade of Middle School" %}
             selected
           {% endif %}  
           >8th grade of Middle School
         </option>
         <option value="9"
-          {% if student.grade == "9" %}
+          {% if student.grade == "9th grade (Freshman) of High School" %}
             selected
           {% endif %}
           >9th grade (Freshman) of High School
         </option>
         <option value="10"
-          {% if student.grade == "10" %}
+          {% if student.grade == "10th grade (Sophomore) of High School" %}
             selected
           {% endif %} 
           >10th grade (Sophomore) of High School 
         </option>
         <option value="11"
-          {% if student.grade == "11" %}
+          {% if student.grade == "11th grade (Junior) of High School" %}
             selected
           {% endif %}  
           >11th grade (Junior) of High School
         </option>
         <option value="12"
-          {% if student.grade == "12" %}
+          {% if student.grade == "12th grade (Senior) of High School" %}
             selected
           {% endif %}
           > 12th grade (Senior) of High School 
@@ -118,7 +118,7 @@
     <div>
       <select name="teacher">
         {% for teacher in instructor_options %}
-        <option value="{{ teacher.id }}" {% if member.teacher_id == teacher.id %}selected{% endif %}>
+        <option value="{{ teacher.id }}" {% if student.teacher_id == teacher.id %}selected{% endif %}>
           {{ teacher.name }}
         </option>
         {% endfor %}
